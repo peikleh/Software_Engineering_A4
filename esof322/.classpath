@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="a2/esof322.a2/src"/>
+	<classpathentry kind="lib" path="a2/esof322.a2.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/girish185/Downloads/BreezySwing.jar"/>
+	<classpathentry kind="output" path="a2/bin"/>
+</classpath>
