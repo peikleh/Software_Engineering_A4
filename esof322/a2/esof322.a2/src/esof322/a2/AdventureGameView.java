@@ -99,7 +99,13 @@ public class AdventureGameView extends GBFrame {
 			model.loadGame();
 		}
 		else if (buttonObj == difficButton){
-			model.changeDifficulty();
+			Object[] possibleValues = { "0", "1", "cancel" };
+			Object selectedValue = JOptionPane.showInputDialog(null,
+			"Choose difficulty (this will restart the game", "Input",
+			JOptionPane.INFORMATION_MESSAGE, null,
+			possibleValues, possibleValues[0]);
+			
+			model.changeDifficulty(selectedValue.toString());
 		}
 
 		displayCurrentInfo();

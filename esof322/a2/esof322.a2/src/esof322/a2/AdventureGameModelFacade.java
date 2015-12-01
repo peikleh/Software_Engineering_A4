@@ -23,7 +23,7 @@ public class AdventureGameModelFacade {
 	Room startRm = theCave.createAdventure(factory);
 
 
-	AdventureGameModelFacade() { // we initialize a start room
+	public AdventureGameModelFacade() { // we initialize a start room
 		thePlayer.setRoom(startRm);
 	}
 
@@ -133,8 +133,22 @@ public class AdventureGameModelFacade {
 		 theCave = d.getAdventure();
 	}
 	
-	public void changeDifficulty(){
-		
+	public void changeDifficulty(String choice){
+		System.out.println(choice);
+		if (choice == "0"){
+			theCave = new Adventure();
+			factory = new ZeroFactory();
+			thePlayer = factory.createPlayer();
+			startRm = theCave.createAdventure(factory);
+			thePlayer.setRoom(startRm);
+		}
+		else if(choice == "1"){
+			theCave = new Adventure();
+			OneFactory factory1 = new OneFactory();
+			thePlayer = factory1.createPlayer();
+			startRm = theCave.createAdventure(factory1);
+			thePlayer.setRoom(startRm);
+		}
 	}
 
 	
