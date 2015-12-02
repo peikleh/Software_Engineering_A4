@@ -15,7 +15,11 @@ package esof322.a2;
 
 public class Item implements java.io.Serializable{
 
-  private String description;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+private String description;
 
   public void setDesc(String d){
       description = d;

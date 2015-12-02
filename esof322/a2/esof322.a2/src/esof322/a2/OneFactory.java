@@ -25,9 +25,13 @@ public class OneFactory extends adventureFactory {
 
 	@Override
 	public Player createPlayer() {
-		return new Player();
+		return new OnePlayer();
 	}
 
+	@Override
+	public Adventure createAdventure() {
+		return new OneAdventure();
 
+	}
 
 }

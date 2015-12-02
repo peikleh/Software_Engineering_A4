@@ -135,8 +135,8 @@ public class AdventureGame {
   }
 
   public void startQuest() throws IOException{
-   Player thePlayer = new Player();
-   Adventure theCave = new Adventure();
+   Player thePlayer = new zeroPlayer();
+   Adventure theCave = new ZeroAdventure();
    Room startRm = theCave.createAdventure( new ZeroFactory());
    thePlayer.setRoom(startRm);
 

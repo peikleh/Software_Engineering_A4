@@ -25,7 +25,12 @@ public class ZeroFactory extends adventureFactory {
 
 	@Override
 	public Player createPlayer() {
-		return new Player();
+		return new zeroPlayer();
+	}
+
+	@Override
+	public Adventure createAdventure() {
+		return new ZeroAdventure();
 	}
 
 

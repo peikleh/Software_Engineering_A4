@@ -15,5 +15,11 @@ package esof322.a2;
 // class Key.
 
 public class Key extends Item {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 }
 

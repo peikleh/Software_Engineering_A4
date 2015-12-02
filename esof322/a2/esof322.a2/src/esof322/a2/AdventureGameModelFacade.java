@@ -17,8 +17,9 @@ public class AdventureGameModelFacade {
 	
 	//Player thePlayer = new Player();
 	
-	Adventure theCave = new Adventure();
+	
 	ZeroFactory factory = new ZeroFactory();
+	Adventure theCave = factory.createAdventure();
 	Player thePlayer = factory.createPlayer();
 	Room startRm = theCave.createAdventure(factory);
 
@@ -70,10 +71,11 @@ public class AdventureGameModelFacade {
 		} else if (thePlayer.handsFull()) {
 			return "Your hands are full";
 		}
-		String item = thePlayer.getLoc().getRoomContents()[choice].getDesc();
+		Item item = thePlayer.getLoc().getRoomContents()[choice];
 		thePlayer.pickUp(thePlayer.getLoc().getRoomContents()[choice]);
+		
 
-		return "You picked up a " + item;
+		return "You picked up a " + item.getDesc();
 
 	}
 
@@ -136,15 +138,15 @@ public class AdventureGameModelFacade {
 	public void changeDifficulty(String choice){
 		System.out.println(choice);
 		if (choice == "0"){
-			theCave = new Adventure();
 			factory = new ZeroFactory();
+			theCave = factory.createAdventure();
 			thePlayer = factory.createPlayer();
 			startRm = theCave.createAdventure(factory);
 			thePlayer.setRoom(startRm);
 		}
 		else if(choice == "1"){
-			theCave = new Adventure();
 			OneFactory factory1 = new OneFactory();
+			theCave = factory1.createAdventure();
 			thePlayer = factory1.createPlayer();
 			startRm = theCave.createAdventure(factory1);
 			thePlayer.setRoom(startRm);
