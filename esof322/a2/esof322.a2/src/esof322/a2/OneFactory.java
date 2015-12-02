@@ -10,7 +10,6 @@ public class OneFactory extends adventureFactory {
 	@Override
 	public Door createDoor(Room r1, Room r2, Key k) {
 		return new Door(r1, r2, k);
-		
 	}
 
 	@Override
